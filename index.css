@@ -16,6 +16,7 @@ margin: 0px;
 	background-image: url(./img/background-header.jpg);
 	background-size: cover;
 	position: relative;
+	background-position: bottom;
 	height: 100px;
 	color: white;
 }
@@ -23,7 +24,7 @@ margin: 0px;
 .programming {
 	position: absolute;
 	font-weight: bold;
-	font-size: 100px;
+	font-size: 110px;
 	left: 1%;
 	top: 50%;
 	transform: translateY(-50%);
@@ -31,15 +32,25 @@ margin: 0px;
 
 .contact1{
 	position: absolute;
-	font-size: 14px;
+	font-size: 16px;
+	font-weight: bold;
 	left: 85%;
-	top: 5%;
+	top: 2%;
+}
+
+#contact {
+	font-size: 20px;
+}
+
+.contact-img {
+	height: 20px;
+	padding-top: 5px;
+	width: 15px;
 }
 
 ul {
 	list-style-type: none;
 }
-
 
 .title {
 	position: absolute;
@@ -53,7 +64,7 @@ ul {
 	position: relative;
 	width: 100%;
 	height: 40px;
-	background-color: #6698FF;
+	background-color: #8F6400;
 }
 
 .header-menu ul{
@@ -65,43 +76,51 @@ ul {
 	transform: translate(-50%, -50%);	
 }
 
-
 .menu {
 	display: inline;
 	margin: 0px 10px;
 	padding: 0px 15px;
 	font-size: 20px;
 }
+
 .menu a {
 	color: white;
 	text-decoration: none;
 }
 
 .menu:hover {
-	background-color: green;
+	background-color: #BF8704;
 	font-weight: bold;
+	padding: 8px 15px;
+	border-radius: 5px;
 }
 
 .dropdown1 {
-	position: relative;
-	padding: 0px 15px;
+	margin-top: 62px;
 	display: none;
 	font-size: 20px;
-	width: 100%;
-	left: 50%;
-	top: 300px;
+	z-index: -1;
 }
 
 .dropdown:hover .dropdown1 {
+	width: 140px;
 	display: block;
 }
 
-#educations, #experiences, #certificates, #publications {
-	height: 140px;
-	width: 100px;
+.menu1 {
+	padding: 8px;
+	margin-top: 3px;
+	position: relative;
+	right: 2px;
+	background-color: #8F6400;
+	border-radius: 5px;
 }
 
-#introduction {
+.menu1:hover {
+	background-color: #BF8704;
+}
+
+#educations,#introduction, #experiences, #certificates, #publications, #projects, #productions {
 	height: 140px;
 	width: 100px;
 }
@@ -117,6 +136,11 @@ ul {
 	width: auto;
 }
 
+h1, h2 {
+	background-color: #CC8439;
+	font-weight: bold;
+}
+
 section {
 	width: 100%;
 	height: auto;
@@ -125,18 +149,25 @@ section {
 
 .foto-profile {
 	float: left;
-	border: 1px solid black;
+	margin: 10px;
 }
 
-.profile-section {
-	padding: 0px 150px;
+.sub-section {
+	padding: 0px 300px;
 	width: 100%;
 	height: auto;
 }
 
 .artikel-profile {
-	
-	text-indent: 50px;
+	padding: 0px 10px;
+	background-color: #E6BE75;
+	text-indent: 40px;
+	text-align: left;
+	text-align: justify;
+}
+
+p {
+	font-size: 16px;
 }
 
 table {
@@ -150,14 +181,31 @@ table {
 
 table thead th, table tbody th, tr, td {
 	padding: 10px 40px;
-	background-color: #B9B5B8;
+	background-color: #E6BE75;
 	border: 2px solid black;
+}
+
+table {
+	width: 750px;
+}
+
+table thead {
+	width: auto;
+}
+
+table .job-des {
+	width: 100%;
+	display: block;
+	height: 250px;
+	overflow: auto;
+	width: 100%;
+	border: none;
+	border-right: 2px solid black;
 }
 
 .job-des {
 	text-align: left;
 }
-
 
 .indent {
 	margin-left: 15px;
@@ -168,13 +216,13 @@ table thead th, table tbody th, tr, td {
 	width: 100%;
 	height: 500px;
 	grid-template: repeat(2, 200px)/ repeat(4, 200px);
-	grid-gap: 10% 10%;
+	grid-gap: 10% 5%;
 	justify-content: center;
 	align-content: center;
 }
+
 .certificates-img {
 	position: relative;
-	background-size: cover;
 	width: 100%;
 	height: 100%;
 }
@@ -184,12 +232,12 @@ table thead th, table tbody th, tr, td {
 }
 
 .certificates-img:hover {
+	transform: translate(-50%,-50%);
 	height: 250px;
 	width: 250px;
-	transition: 1.5s;
+	transition: 1s;
 	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%)
+	top: 50%;	
 }
 
 .box1 {
@@ -211,42 +259,29 @@ table thead th, table tbody th, tr, td {
 .box {
 	text-align: center;
 	transition: 2s;
-	padding: 10px 34px;
+	padding: 20px 34px;
 }
 
 .box.naik{
 		position: absolute;
         background: red;
-        transform: translateY(-10px);		
+        transform: translate(0px,-20px);
 }
+
 .slide:hover .box.naik {
-	transform: translateY(-52px);
+	transform: translateY(-62px);
 }
 
 #footer {
 	width: 100%;
-	background-color: black;
+	background-color: #785505;
 	height: 30px;
 }
 
 #footer p {
+	padding-top: 5px;
 	width: 100%;
 	text-align: center;
 	color: white;
 	font-weight: bold;
-}
-
-#contact {
-	font-size: 20px;
-}
-
-#footer nav ul li {
-	display: inline;
-	padding: 0px 5px;
-}
-
-.contact-img {
-	height: 20px;
-	padding-top: 5px;
-	width: 15px;
 }
