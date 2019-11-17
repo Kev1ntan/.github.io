@@ -24,7 +24,7 @@ margin: 0px;
 .programming {
 	position: absolute;
 	font-weight: bold;
-	font-size: 110px;
+	font-size: 90px;
 	left: 1%;
 	top: 50%;
 	transform: translateY(-50%);
@@ -34,7 +34,7 @@ margin: 0px;
 	position: absolute;
 	font-size: 16px;
 	font-weight: bold;
-	left: 85%;
+	left: 80%;
 	top: 2%;
 }
 
@@ -54,7 +54,7 @@ ul {
 
 .title {
 	position: absolute;
-	font-size: 50px;
+	font-size: 45px;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -153,7 +153,7 @@ section {
 }
 
 .sub-section {
-	padding: 0px 300px;
+	padding: 0px 300px;;
 	width: 100%;
 	height: auto;
 }
@@ -174,13 +174,12 @@ table {
 	margin-top: 20px;
 	position: relative;
 	left: 50%;
-	top: 50%;
 	transform: translateX(-50%);
 	border-collapse: collapse;	
 }
 
 table thead th, table tbody th, tr, td {
-	padding: 10px 40px;
+	padding: 10px 20px;
 	background-color: #E6BE75;
 	border: 2px solid black;
 }
@@ -259,17 +258,18 @@ table .job-des {
 .box {
 	text-align: center;
 	transition: 2s;
-	padding: 20px 34px;
+	padding: 10px 16px;
 }
 
 .box.naik{
-		position: absolute;
-        background: red;
-        transform: translate(0px,-20px);
+	position: absolute;
+    background-image: url(./img/slider-img.jpg);
+    transform: translate(0px,-10px);
 }
 
 .slide:hover .box.naik {
 	transform: translateY(-62px);
+	opacity: 0;
 }
 
 #footer {
