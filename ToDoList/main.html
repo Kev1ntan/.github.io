@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do Lists</title>
+    <link href = "css/index.css" type = "text/css" rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class = 'container'>
+        <h3>To Do List</h3>
+        <input id = "inputTask" type = "text" onkeydown = "enter()" placeholder = "Input your task here...">
+        <button id = "add" type = "button" onclick = "addTask()">Add</button>
+        <button id = "clear" type = "button" onclick = "clearList()">Clear</button>
+        <div id = "myTasks">
+            <ul id = "ul"></ul>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
