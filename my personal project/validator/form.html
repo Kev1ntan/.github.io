@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+	margin: 0px;
+    padding: 0px;
+}
+#box {
+	margin: 40px;
+	background-color: red;
+    width: 440px;
+    height:330px;
+    border-radius: 20px;
+}
+#sec {
+	width: 380px;
+	padding-top: 15px;
+    padding-left: 20px;
+	padding-right: 20px;
+    padding-bottom: 15px;
+}
+input {
+	width: 100%;
+}
+button {
+	border-radius: 15px;
+    width: 70px;
+    height: 30px;
+}
+</style>
+</head>
+<body>
+<form action="#" id="main-form">
+<div id="box">
+	<div id="sec">
+      <div>Username</div>
+      <input id="username" type="text" value="">
+      <div>Password</div>
+      <input id="password" type="password" value="">
+      <div>Confirm Password</div>
+      <input id="conPass" type="password" value="">
+      <div>Email</div>
+      <input id="email" type="text" value="">
+      <div>Confirm Email</div>
+      <input id="conEmail" type="text" value=""><br><br>
+      <center><button type="submit">Submit</button></center>
+    </div>
+</div>
+</form>
+<p id="log"></p>
+<script>
+var form = document.getElementById("main-form")
+form.addEventListener('submit', logSubmit);
+function logSubmit(event) {
+	var user = document.getElementById("username").value.trim()
+    var pass = document.getElementById("password").value
+    var checkpass = document.getElementById("conPass").value
+    var email = document.getElementById("email").value
+    var checkemail = document.getElementById("conEmail").value
+    if(user.length === 0){
+    	alert('please fill username')
+    }
+    else if(user.length < 6){
+    	alert('please input username atleast 7 characters')
+    }
+    else {
+        if(pass.length === 0){
+    	    alert('please fill password')
+        }
+        else if(pass.length < 7){
+    	    alert('please fill password atleast 8 characters')
+        }
+        else if(pass.match(/[^0-9A-Za-z]/)) {
+            alert('password just contain letters and numbers')
+        }
+        else {
+            if(checkpass !== pass){
+    	        alert('confirmed password must same with password')
+            }
+            else {
+                if(email.length === 0){
+    	            alert('please fill email')
+                }
+                else if(checkemail !== email){
+    	            alert('confirmed email must same with email')
+                }
+                else {
+                    document.getElementById("username").value = ''
+                    document.getElementById("password").value = ''
+                    document.getElementById("conPass").value = ''
+                    document.getElementById("email").value = ''
+                    document.getElementById("conEmail").value = ''
+  		            alert(`Form Submitted! username:${user} password:${pass} email:${email}`)
+                }
+            }
+        }
+  	}
+  event.preventDefault();
+}
+const log = document.getElementById('log');
+</script>
+
+</body>
+</html>

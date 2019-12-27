@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 460px;
+    margin: auto;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+}
+
+h3 {
+    font-family: 'Dancing Script';
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.container {
+    width: 340px;
+    position: absolute;
+    text-align: left;
+    top: 100px;
+    left: 230px;
+    transform: translateX(-50%);
+}
+
+#inputTask{
+    width: 220px;
+}
+
+#add, #clear {
+    width: 50px;
+    height: 30px;
+}
+
+#add:hover, #clear:hover {
+    font-weight: bold;
+    background-color: burlywood;
+}
+
+ul {
+    text-align: center;
+}
+
+li{
+    margin: 2px 0px;
+    border: 1px dotted black;
+    padding: 1px;
+    list-style: none;  
+}
+
+li:hover {
+    background-color: burlywood;
+    border: 1px solid red;
+}
+
+.delBut {
+    margin: 0px 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    color: red;
+    border: 1px solid black;
+}
+
+.cekBut {
+    margin: 0px 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    color: green;
+    border: 1px solid black;
+}
+
+span {
+    text-decoration: none; 
+}

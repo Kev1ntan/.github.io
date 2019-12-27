@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+    float: left;
+    border: 1px solid black;
+    width: 30px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="box">6</div>
+<div class="box">5</div>
+<div class="box">1</div>
+<div class="box">4</div>
+<div class="box">3</div>
+<div class="box">11</div>
+<div class="box">7</div>
+<div class="box">8</div>
+<div class="box">9</div>
+<button type="button" onclick="start()">Start</button>
+<script>
+    var box = document.getElementsByClassName("box")
+    for(let i = 0; i < box.length; i++){
+        box[i].style.height = box[i].innerHTML*20 +"px"
+    }
+var speed = 500
+var i = 1
+function start () {
+    var count = 0
+        var run = setInterval(sort, speed)
+        function sort () {
+            if(count < box.length-i) {
+                box[count].style.backgroundColor = 'blue'
+                box[count+1].style.backgroundColor = 'blue'
+                if(Number(box[count].innerHTML) > Number(box[count+1].innerHTML)) {
+                temp = box[count].innerHTML
+                box[count].innerHTML =  box[count+1].innerHTML
+                box[count+1].innerHTML = temp
+                box[count].style.height = box[count].innerHTML*20 +"px"
+                box[count+1].style.height = box[count+1].innerHTML*20 +"px"
+                }
+            }
+            else {
+                clearInterval(run)
+            }   
+        }
+        var changeC = setInterval(color, speed*2)
+        function color () {
+            if(count < box.length-1) {
+                box[count].style.backgroundColor = 'white'
+                box[count+1].style.backgroundColor = 'white'
+                count++
+            }
+            else {
+                clearInterval(changeC)
+                i++
+                if(i < box.length) {
+                    var next = false;
+                    for(let i =0; i < box.length-1; i++) {
+                        if(Number(box[i].innerHTML) > Number(box[i+1].innerHTML)) {
+                            next = true
+                            break;
+                        }
+                    }
+                    if(next) {
+                        start()
+                    }
+                }
+            }   
+        }
+}
+
+</script>
+</body>
+</html>

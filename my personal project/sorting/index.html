@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sorting Algorithm</title>
+<link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <center>
+            <input id="datas" type="number">data amount</input>
+            <input id="min" type="number">min</input>
+            <input id="max" type="number">max</input>
+            <button type="button" onclick="generate()">Generate data</button>
+            <label>Sorting type:
+            <select id="select">
+                <option value="bubble">Bubble</option>
+                <option value="selection">Selection</option>
+            </select>
+            <select id="by">
+                <option value="ascending">Ascending</option>
+                <option value="descending">Descending</option>
+            </select>
+            <button type="button" onclick="sorting()">Sort</button>
+        </center>
+    </div>
+    <div id="row">
+    </div>
+
+<script src="main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>

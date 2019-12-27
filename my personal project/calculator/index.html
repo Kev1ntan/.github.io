@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Calculator</title>
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="box">
+        <center><input id="display" disabled></input></center>
+        <center><input id="display2" placeholder="0" disabled></input></center>
+
+    <section>
+        <button>a</button>
+        <button>a</button>
+        <button onclick="back()"><--</button>
+        <button onclick="reset()">C</button>
+    </section>
+    <section>
+        <button id = "opa" onclick="num(7)">7</button>
+        <button id = "opa" onclick="num(8)">8</button>
+        <button id = "opa" onclick="num(9)">9</button>
+        <button onclick="num('/')">/</button>
+    </section>
+    <section>
+        <button id = "opa" onclick="num(4)">4</button>
+        <button id = "opa" onclick="num(5)">5</button>
+        <button id = "opa" onclick="num(6)">6</button>
+        <button onclick="num('*')">x</button>
+    </section>
+    <section>
+        <button id = "opa" onclick="num(1)">1</button>
+        <button id = "opa" onclick="num(2)">2</button>
+        <button id = "opa" onclick="num(3)">3</button>
+        <button onclick="num('-')">-</button>
+    </section>
+    <section>
+        <button id = "opa" onclick="num(0)">0</button>
+        <button id = "opa" onclick="num('.')">.</button>
+        <button style="background-color: greenyellow;" onclick="ress()">=</button>
+        <button onclick="num('+')">+</button>
+    </section>
+    </div>
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

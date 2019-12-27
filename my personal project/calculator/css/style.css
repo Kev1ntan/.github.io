@@ -1,0 +1,54 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: green;
+}
+
+#box {
+    margin: 20px auto;
+    width: 320px;
+    height: 400px;
+    background-color: aqua;
+}
+
+#opa {
+    background-color: whitesmoke;
+}
+
+#display {
+    margin-top: 20px;
+    border-top: 2px solid black;
+    border-bottom: 1px solid greenyellow;
+}
+
+#display2 {
+    border-top: 2px solid greenyellow;
+    border-bottom: 1px solid black;
+}
+
+#display, #display2 {
+    font-size: 20px;
+    text-align: right;
+    background-color: greenyellow;
+    width: 70%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    height: 20px;
+}
+
+button {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+section {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
