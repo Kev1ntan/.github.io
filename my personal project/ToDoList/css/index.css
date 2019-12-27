@@ -4,12 +4,14 @@
 }
 
 body {
+    background-color: bisque;
     width: 460px;
     margin: auto;
     background-image: url("../img/background.jpg");
     background-repeat: no-repeat;
     background-position: top;
     position: relative;
+    background-size: 500px;
 }
 
 h3 {
