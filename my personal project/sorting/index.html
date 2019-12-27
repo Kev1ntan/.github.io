@@ -8,10 +8,14 @@
 <body>
     <div class="header">
         <center>
-            <input id="datas" type="number">data amount</input>
-            <input id="min" type="number">min</input>
-            <input id="max" type="number">max</input>
+            <label>Data amount:</label>
+            <input id="datas" type="number"></input>
+            <label>Number range:</label>
+            <input id="min" type="number">to</input>
+            <input id="max" type="number"></input>
             <button type="button" onclick="generate()">Generate data</button>
+            <label>Sorting speed:(1)</label>
+            <input id="speed" type="number" min="1"></input>
             <label>Sorting type:
             <select id="select">
                 <option value="bubble">Bubble</option>
