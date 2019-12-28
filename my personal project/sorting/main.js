@@ -47,17 +47,23 @@ function sorting() {
     }
     else {
         if(selectedType === "bubble" && selectedSortBy === "ascending") {
-            bubbleSort('>')
+          bubbleSort('>')
         }
         else if(selectedType === "bubble" && selectedSortBy === "descending") {
-            bubbleSort('<')
+          bubbleSort('<')
         }
         else if(selectedType === "selection" && selectedSortBy === "ascending") {
-            selectionSort('>')
+          selectionSort('>')
         }
         else if(selectedType === "selection" && selectedSortBy === "descending") {
           selectionSort('<')
-      }
+        }
+        else if(selectedType === "insertion" && selectedSortBy === "ascending") {
+          insertionSort('>')
+        }
+        else if(selectedType === "insertion" && selectedSortBy === "descending") {
+          insertionSort('<')
+        }
     }
 }
 
@@ -310,6 +316,129 @@ function selectionSort(by) {
           }
           else {
           box[run-1].style.backgroundColor = doneColor
+          }
+        }   
+      }
+    }
+  }
+}
+
+function insertionSort(by) {//still not perfect
+  if(by === '>') {
+    start()
+    function start () {
+      var count = run-1
+      var mark = setInterval(sort, speed)
+      function sort () {
+        if(count >= 0) {
+          box[count].style.backgroundColor = selectColor
+          box[count+1].style.backgroundColor = selectColor
+          if(Number(box[count].innerHTML) > Number(box[count+1].innerHTML)) {
+            temp = box[count].innerHTML
+            box[count].innerHTML =  box[count+1].innerHTML
+            box[count+1].innerHTML = temp
+            box[count].style.height = 20 + Math.abs(box[count].innerHTML*20) +"px"
+            box[count+1].style.height = 20 + Math.abs(box[count+1].innerHTML*20) +"px"
+          }
+        }
+        else {
+          clearInterval(mark)
+        }   
+      }
+      var changeC = setInterval(color, speed*2)
+      function color () {
+        if(count >= 0) {
+          box[count].style.backgroundColor = unselectColor
+          box[count+1].style.backgroundColor = unselectColor
+          count--
+        }
+        else {
+          clearInterval(changeC)
+          run++
+          if(run < box.length) {
+            var next = false;
+            for(let i = 0; i < box.length-1; i++) {
+              if(Number(box[i].innerHTML) > Number(box[i+1].innerHTML)) {
+                next = true
+                break;
+              }
+            }
+            if(next) {
+              start()
+            }
+          }
+          else {
+            var from = run-1
+            var done = setInterval(auto, speed)
+            function auto() {
+              if(0 <= from) {
+                box[from].style.backgroundColor = doneColor
+                from--
+              }
+              else {
+                clearInterval(done)
+              }
+            }
+          }
+        }   
+      }
+    }
+  }
+  else {
+    start()
+    function start () {
+      var count = run-1
+      var mark = setInterval(sort, speed)
+      function sort () {
+        if(count >= 0) {
+          box[count].style.backgroundColor = selectColor
+          box[count+1].style.backgroundColor = selectColor
+          if(Number(box[count].innerHTML) < Number(box[count+1].innerHTML)) {
+            temp = box[count].innerHTML
+            box[count].innerHTML =  box[count+1].innerHTML
+            box[count+1].innerHTML = temp
+            box[count].style.height = 20 + Math.abs(box[count].innerHTML*20) +"px"
+            box[count+1].style.height = 20 + Math.abs(box[count+1].innerHTML*20) +"px"
+          }
+        }
+        else {
+          clearInterval(mark)
+        }   
+      }
+      var changeC = setInterval(color, speed*2)
+      function color () {
+        if(count >= 0) {
+          box[count].style.backgroundColor = unselectColor
+          box[count+1].style.backgroundColor = unselectColor
+          count--
+        }
+        else {
+          clearInterval(changeC)
+          run++
+          if(run < box.length) {
+            var next = false;
+            for(let i = 0; i < box.length-1; i++) {
+              if(Number(box[i].innerHTML) < Number(box[i+1].innerHTML)) {
+                next = true
+                break;
+              }
+            }
+            if(next) {
+              start()
+            }
+          }
+          else {
+            var from = run-1
+            var done = setInterval(auto, speed)
+            function auto() {
+              if(0 <= from) {
+                box[from].style.backgroundColor = doneColor
+                from--
+              }
+              else {
+                clearInterval(done)
+              }
+            }
           }
         }   
       }
